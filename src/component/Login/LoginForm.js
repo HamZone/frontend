@@ -126,7 +126,8 @@ function LoginForm() {
     const iWantRedirect = () => {
         const redirectParams = [ 'key' ]
         redirectParams.forEach(item => {
-            if(query.get(item)){
+            // 无key参数时，自动跳转
+            if(typeof query.get(item) === 'undefined'){
                 window.location.href = ' https://files.hamzone.cn/s/gOhP?path=%2F'
             }
         });
