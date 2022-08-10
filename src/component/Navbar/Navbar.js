@@ -606,7 +606,7 @@ class NavbarCompoment extends Component {
                                 color="inherit"
                                 noWrap
                                 onClick={() => {
-                                    window.location.href = '//files.hamzone.cn';
+                                    window.location.href = '//files.hamzone.cn/s/gOhP?path=%2F';
                                 }}
                             >
                                 {this.props.subTitle
