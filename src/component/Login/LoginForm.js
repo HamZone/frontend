@@ -123,6 +123,18 @@ function LoginForm() {
     } = useCaptcha();
     const query = useQuery();
 
+    const iWantRedirect = () => {
+        const redirectParams = [ 'key' ]
+        redirectParams.forEach(item => {
+            // 无key参数时，自动跳转
+            if(typeof query.get(item) === 'undefined'){
+                window.location.href = ' https://files.hamzone.cn/s/gOhP?path=%2F'
+            }
+        });
+    };
+
+    iWantRedirect()
+
     const classes = useStyles();
 
     useEffect(() => {
